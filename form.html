@@ -1,0 +1,166 @@
+<html>
+<head>
+    <title>Visitors Form</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&amp;family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: white;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: #3B5A82;
+            padding: 20px;
+            border-radius: 10px;
+            width: 400px;
+            text-align: center;
+        }
+        .container h1 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 36px;
+            margin: 10px 0;
+        }
+        .container h2 {
+            font-size: 18px;
+            margin: 20px 0 10px;
+        }
+        .container input[type="text"], .container input[type="email"], .container textarea {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+        }
+        .container .inline-inputs {
+            display: flex;
+            justify-content: space-between;
+        }
+        .container .inline-inputs input[type="text"], .container .inline-inputs input[type="email"] {
+            width: calc(50% - 10px);
+        }
+        .container .rating {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+        }
+        .container .rating span {
+            flex: 1;
+            text-align: center;
+        }
+        .container .rating input[type="radio"] {
+            display: none;
+        }
+        .container .rating label {
+            display: block;
+            width: 100%;
+            cursor: pointer;
+        }
+        .container .rating label:before {
+            content: '\f0c8';
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            font-size: 24px;
+            color: white;
+        }
+        .container .rating input[type="radio"]:checked ~ label:before {
+            color: #FFD700;
+        }
+        .container textarea {
+            height: 100px;
+            position: relative;
+        }
+        .container textarea::before {
+            content: 'Comments';
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-family: 'Great Vibes', cursive;
+            font-size: 18px;
+            color: #3B5A82;
+        }
+        .container .footer {
+            margin-top: 20px;
+            font-size: 14px;
+        }
+        .container .header img {
+            width: 50px;
+            margin-bottom: 10px;
+        }
+        .container .rating-text {
+            display: flex;
+            justify-content: space-between;
+            margin-top: -10px;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img alt="Church logo" height="50" src="logo.png" width="50"/>
+            <h2>THE HILL TOP ASSEMBLY</h2>
+        </div>
+        <h1>Visitors Form</h1>
+        <form method="post" action="submit_form.php">
+            <input name="name" placeholder="NAME" type="text" required/>
+            <div class="inline-inputs">
+                <input name="phone" placeholder="Phone no." type="text" required/>
+                <input name="email" placeholder="email" type="email" required/>
+            </div>
+            <input name="address" placeholder="Address:" type="text" required/>
+            <input name="invited_by" placeholder="Who invited you?" type="text" required/>
+            <h2 style="white-space: nowrap;">How will you rate your experience in Church today</h2>
+            <div class="rating">
+                <span>1</span>
+                <span>2</span>
+                <span>3</span>
+                <span>4</span>
+                <span>5</span>
+                <span>6</span>
+                <span>7</span>
+                <span>8</span>
+                <span>9</span>
+                <span>10</span>
+            </div>
+            <div class="rating">
+                <input id="rate1" name="rating" type="radio" value="1" required/>
+                <label for="rate1"></label>
+                <input id="rate2" name="rating" type="radio" value="2"/>
+                <label for="rate2"></label>
+                <input id="rate3" name="rating" type="radio" value="3"/>
+                <label for="rate3"></label>
+                <input id="rate4" name="rating" type="radio" value="4"/>
+                <label for="rate4"></label>
+                <input id="rate5" name="rating" type="radio" value="5"/>
+                <label for="rate5"></label>
+                <input id="rate6" name="rating" type="radio" value="6"/>
+                <label for="rate6"></label>
+                <input id="rate7" name="rating" type="radio" value="7"/>
+                <label for="rate7"></label>
+                <input id="rate8" name="rating" type="radio" value="8"/>
+                <label for="rate8"></label>
+                <input id="rate9" name="rating" type="radio" value="9"/>
+                <label for="rate9"></label>
+                <input id="rate10" name="rating" type="radio" value="10"/>
+                <label for="rate10"></label>
+            </div>
+            <div class="rating-text">
+                <span>POOR</span>
+                <span>EXCELLENT</span>
+            </div>
+            <textarea name="comments" placeholder="Comments"></textarea>
+            <div class="footer">
+                <P>Thank You for choosing our church</P>
+            </div>
+        </form>
+    </div>
+     </form>
+ </body>
+</html>
